@@ -1,0 +1,90 @@
+-------------------- Loading schema and data: --------------------
+
+psql:schema.ddl:22: NOTICE:  drop cascades to 12 other objects
+DETAIL:  drop cascades to table ticketschema.venueowners
+drop cascades to table ticketschema.venue
+drop cascades to table ticketschema.sectiontable
+drop cascades to table ticketschema.seattable
+drop cascades to table ticketschema.concert
+drop cascades to table ticketschema.ticket
+drop cascades to table ticketschema.purchases
+drop cascades to view ticketschema.ticketsum
+drop cascades to view ticketschema.accessibleseats
+drop cascades to view ticketschema.allseats
+drop cascades to view ticketschema.ticketcount
+drop cascades to view ticketschema.ticketmax
+DROP SCHEMA
+CREATE SCHEMA
+SET
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+SET
+INSERT 0 2
+INSERT 0 3
+INSERT 0 6
+INSERT 0 76
+INSERT 0 7
+INSERT 0 13
+INSERT 0 7
+
+-------------------- Query 1: -----------------------------------
+
+psql:q1.sql:1: NOTICE:  view "ticketsum" does not exist, skipping
+DROP VIEW
+psql:q1.sql:2: NOTICE:  view "allseats" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+CREATE VIEW
+             concert_name              |      datetime       | total_ticket_value |     percentage     
+---------------------------------------+---------------------+--------------------+--------------------
+ Mariah Carey - Merry Christmas to all | 2022-12-09 20:00:00 |               1406 | 10.000000149011612
+ TSO - Elf in Concert                  | 2022-12-10 14:30:00 |                159 |   4.76190485060215
+ Women's Blues Review                  | 2022-11-25 20:00:00 |                275 |  7.999999821186066
+ TSO - Elf in Concert                  | 2022-12-09 19:30:00 |                159 |   4.76190485060215
+ Mariah Carey - Merry Christmas to all | 2022-12-11 20:00:00 |               1256 | 10.000000149011612
+ Ron Sexsmith                          | 2022-12-03 19:30:00 |                229 |  7.999999821186066
+ TSO - Elf in Concert                  | 2022-12-10 19:30:00 |                159 |   4.76190485060215
+(7 rows)
+
+
+-------------------- Query 2: -----------------------------------
+
+                        name                         | venues_count 
+-----------------------------------------------------+--------------
+ The Corporation of Massey Hall and Roy Thomson Hall |            2
+ Maple Leaf Sports & Entertainment                   |            1
+(2 rows)
+
+
+-------------------- Query 3: -----------------------------------
+
+psql:q3.sql:1: NOTICE:  view "accessibleseats" does not exist, skipping
+DROP VIEW
+DROP VIEW
+CREATE VIEW
+CREATE VIEW
+ venue_id |    venue_name    | percentage 
+----------+------------------+------------
+        2 | Roy Thomson Hall |          0
+        1 | Massey Hall      |       0.24
+        3 | ScotiaBank Arena | 0.33333334
+(3 rows)
+
+
+-------------------- Query 4: -----------------------------------
+
+psql:q4.sql:1: NOTICE:  view "ticketcount" does not exist, skipping
+DROP VIEW
+psql:q4.sql:2: NOTICE:  view "ticketmax" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+CREATE VIEW
+ username 
+----------
+ cristonc
+(1 row)
